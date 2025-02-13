@@ -1,0 +1,277 @@
+/* Reset and Basic Styling */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Or 'Roboto', sans-serif for body text */
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+img {
+    max-width: 100%;
+    display: block; /* Prevents extra space below images */
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Add some side padding on smaller screens */
+}
+
+.section-padding {
+    padding: 80px 0; /* Top and bottom padding for sections */
+}
+
+.section-description {
+    color: #777;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.bg-light {
+    background-color: #f9f9f9; /* Light grey background for alternating sections */
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.primary-button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+}
+
+.primary-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.large-button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #e0f7fa; /* Light cyan/teal background */
+    padding: 150px 0 100px; /* Larger padding for hero */
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    color: #333; /* Dark text for hero headline */
+    margin-bottom: 20px;
+}
+
+.hero-subheadline {
+    font-size: 1.2rem;
+    color: #555; /* Slightly lighter text for subheadline */
+    margin-bottom: 40px;
+}
+
+/* Benefits Section */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    text-align: center;
+}
+
+.benefit-item img {
+    margin: 0 auto 20px; /* Center image and add space below */
+    max-width: 80px; /* Adjust icon size as needed */
+}
+
+.benefit-item h3 {
+    margin-bottom: 10px;
+}
+
+/* About Section */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 50px;
+    align-items: center; /* Vertically align content */
+}
+
+.about-image {
+    border-radius: 8px; /* Rounded corners for image */
+    overflow: hidden; /* Ensure image stays within rounded corners */
+}
+
+.about-text {
+    /* Text content for About section */
+}
+
+/* Services Section */
+.services-list {
+    list-style: none; /* Remove default list bullets */
+    padding-left: 0; /* Remove default left padding for ul */
+}
+
+.services-list li {
+    margin-bottom: 15px;
+    padding-left: 25px; /* Add some left padding for indentation */
+    position: relative; /* For pseudo-element bullet */
+}
+
+.services-list li::before {
+    content: "\2022"; /* Unicode for a bullet point */
+    position: absolute;
+    left: 0;
+    top: 5px; /* Adjust vertical alignment as needed */
+    color: #4CAF50; /* Bullet point color - same as button */
+}
+
+/* Testimonials Section */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.testimonial-author {
+    font-style: italic;
+    text-align: right;
+    margin-top: 15px;
+    color: #777;
+}
+
+/* Booking Section */
+.booking-options {
+    text-align: center;
+}
+
+.or-separator {
+    margin: 20px 0;
+    font-weight: bold;
+    color: #777;
+}
+
+.contact-details {
+    margin-top: 20px;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333; /* Dark background for footer */
+    color: #f9f9f9; /* Light text for footer */
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    /* Tablet and smaller screens */
+    .hero {
+        padding: 100px 0 80px; /* Adjust hero padding on smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-subheadline {
+        font-size: 1.1rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        text-align: center; /* Center text in stacked about section */
+    }
+
+    .about-image {
+        margin-bottom: 30px; /* Add space below image when stacked */
+    }
+
+    .section-padding {
+        padding: 60px 0; /* Reduce section padding on smaller screens */
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Slightly smaller section headings */
+    }
+}
+
+@media (max-width: 576px) {
+    /* Even smaller screens (mobile) */
+    .hero h1 {
+        font-size: 1.7rem; /* Even smaller hero headline on mobile */
+    }
+
+    .hero-subheadline {
+        font-size: 1rem;
+    }
+
+    .section-padding {
+        padding: 40px 0; /* Further reduce section padding on mobile */
+    }
+
+    .button, .large-button {
+        font-size: 1rem; /* Buttons smaller on mobile */
+        padding: 10px 20px;
+    }
+
+    .large-button {
+        font-size: 1.1rem; /* Slightly larger button still on mobile */
+        padding: 12px 25px;
+    }
+}
