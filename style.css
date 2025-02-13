@@ -274,7 +274,7 @@ p {
         font-size: 1.1rem; /* Slightly larger button still on mobile */
         padding: 12px 25px;
     }
-    /* --- Pop-up Styles --- */
+       /* --- Pop-up Styles --- */
 .popup-overlay {
     position: fixed; /* Stay in place */
     top: 0;
@@ -354,4 +354,6 @@ p {
     text-align: center;
     margin-top: 15px;
 }
-}
+
+
+ 
