@@ -1,13 +1,13 @@
 /* --- Color Palette CSS Variables (Serene Wellness) --- */
 :root {
-    --primary-color: #e0f7fa;        /* Deep Blue-Green */
+    --primary-color: #1C6E8F;        /* Deep Blue-Green */
     --secondary-color-1: #F5F0EC;   /* Warm Beige/Cream */
     --secondary-color-2: #E0E0E0;   /* Light Gray */
     --accent-color: #B2BEB5;         /* Muted Sage Green */
     --text-color-dark: #333;         /* Dark Gray for primary text (like headings) */
     --text-color-light: #555;        /* Lighter Gray for secondary text, body copy */
     --background-light: #f9f9f9;     /* Light Background (like for sections) */
-    --background-hero: #1C6E8F;      /* Hero Section Background (light cyan/teal - we can keep this or adjust with palette) */
+    --background-hero: #e0f7fa;      /* Hero Section Background (light cyan/teal - we can keep this or adjust with palette) */
     --white: #fff;                  /* Pure White */
 }
 /* Reset and Basic Styling */
