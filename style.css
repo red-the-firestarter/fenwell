@@ -20,8 +20,8 @@
 body {
     font-family: 'Poppins', sans-serif; /* Or 'Roboto', sans-serif for body text */
     line-height: 1.6;
-    color: #333;
-    background-color: #fff;
+    color: var(--text-color-light); /* Set default text color to lighter gray */
+    background-color: var(--white);
 }
 
 img {
@@ -51,7 +51,7 @@ a {
 }
 
 .bg-light {
-    background-color: #f9f9f9; /* Light grey background for alternating sections */
+    background-color:var(--secondary-color-1); /* Use Warm Beige/Cream for light backgrounds */
 }
 
 /* Typography */
@@ -60,6 +60,7 @@ h1, h2, h3 {
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
+    var(--text-color-light); /* Set default text color to lighter gray */
 }
 
 h1 {
