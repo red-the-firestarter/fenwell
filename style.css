@@ -78,13 +78,13 @@ p {
 }
 
 .primary-button {
-    background-color: #1C6E8F; /* Green button */
+    background-color: var(--primary-color); /* Use CSS variable */
     color: white;
-    border: none;
+    border: none; /* Removed border for now, can add back if needed */
 }
 
 .primary-button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: color-mix(in srgb, var(--primary-color) black 20%); /* Darken on hover using color-mix - modern CSS */
 }
 
 .large-button {
@@ -94,8 +94,8 @@ p {
 
 /* Hero Section */
 .hero {
-    background-color: #e0f7fa; /* Light cyan/teal background */
-    padding: 150px 0 100px; /* Larger padding for hero */
+    background-color: var(--background-hero); /* Use CSS variable */
+    padding: 150px 0 100px;
     text-align: center;
 }
 
@@ -162,11 +162,11 @@ p {
 }
 
 .services-list li::before {
-    content: "\2022"; /* Unicode for a bullet point */
+    content: "\2022";
     position: absolute;
     left: 0;
-    top: 5px; /* Adjust vertical alignment as needed */
-    color: #4CAF50; /* Bullet point color - same as button */
+    top: 5px;
+    color: var(--primary-color); /* Use CSS variable */
 }
 
 /* Testimonials Section */
