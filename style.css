@@ -7,7 +7,7 @@
     --text-color-dark: #333;         /* Dark Gray for primary text (like headings) */
     --text-color-light: #555;        /* Lighter Gray for secondary text, body copy */
     --background-light: #f9f9f9;     /* Light Background (like for sections) */
-    --background-hero: #e0f7fa;      /* Hero Section Background (light cyan/teal - we can keep this or adjust with palette) */
+    --hero-background-color: #e0f7fa; /* Hero Section Background (light cyan/teal - kept for potential future use) */
     --white: #fff;                  /* Pure White */
 }
 /* Reset and Basic Styling */
@@ -107,7 +107,7 @@ p {
 
 /* Hero Section */
 .hero {
-    background-color: var(--background-hero); /* Use CSS variable */
+    background-color: var(--secondary-color-1); /* Change to Warm Beige/Cream background */
     padding: 150px 0 100px;
     text-align: center;
 }
