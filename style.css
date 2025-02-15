@@ -177,9 +177,11 @@ p {
 
 .benefit-item img {
     margin: 0 auto 20px; /* Center image and add space below */
-    max-width: 80px; /* Adjust icon size as needed */
+    /* max-width: 80px;  Remove max-width - we'll use fixed width/height */
+    width: 80px;         /* Fixed width for icon container (adjust as needed) */
+    height: 80px;        /* Fixed height for icon container (adjust to match width for square) */
+    object-fit: contain; /* Scale image to fit within container, maintaining aspect ratio */
 }
-
 .benefit-item h3 {
     margin-bottom: 10px;
 }
