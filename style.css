@@ -119,6 +119,23 @@ p {
     color: var(--white); /* Default text color in hero section set to white */
 }
 
+/* Hero Section - Logo Styling */
+.hero-logo {
+    max-width: 150px; /* Adjust logo max width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 30px; /* Space between logo and headline */
+    display: block; /* Center logo horizontally */
+    margin-left: auto; /* Center logo horizontally */
+    margin-right: auto; /* Center logo horizontally */
+}
+
+/* Media query for smaller screens - make logo smaller on mobile */
+@media (max-width: 576px) {
+    .hero-logo {
+        max-width: 120px; /* Smaller logo on mobile */
+        margin-bottom: 20px; /* Less space below logo on mobile */
+    }
+}
 .hero::before {
     content: "";
     position: absolute;
