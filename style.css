@@ -1,250 +1,224 @@
-/* Reset and Basic Styling */
-*, *::before, *::after {
-    box-sizing: border-box;
+/* style.css */
+
+/* --- General Styles --- */
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-}
-
-/* --- Color Palette CSS Variables (Serene Wellness) --- */
-:root {
-    --primary-color: #1C6E8F;        /* Deep Blue-Green */
-    --secondary-color-1: #F5F0EC;   /* Warm Beige/Cream */
-    --secondary-color-2: #E0E0E0;   /* Light Gray */
-    --accent-color: #B2BEB5;         /* Muted Sage Green */
-    --text-color-dark: #333;         /* Dark Gray for primary text (like headings) */
-    --text-color-light: #555;        /* Lighter Gray for secondary text, body copy */
-    --background-light: #f9f9f9;     /* Light Background (like for sections) */
-    --background-hero: #e0f7fa;      /* Hero Section Background (light cyan/teal - we can keep this or adjust with palette) */
-    --white: #fff;                  /* Pure White */
-}
-
-body {
-    font-family: 'Poppins', sans-serif; /* Or 'Roboto', sans-serif for body text */
+    box-sizing: border-box;
     line-height: 1.6;
-    color: var(--text-color-light);
-    background-color: var(--white); /* Main body background set to white */
-}
-
-img {
-    max-width: 100%;
-    display: block; /* Prevents extra space below images */
-}
-
-a {
-    text-decoration: none;
-    color: inherit; /* Inherit color from parent */
+    color: #333; /* Dark gray text */
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Add some side padding on smaller screens */
+    padding: 0 20px; /* Add some side padding for smaller screens */
 }
 
 .section-padding {
     padding: 80px 0; /* Top and bottom padding for sections */
 }
 
-.section-description {
-    color: var(--text-color-light);
-    margin-bottom: 30px;
-    font-size: 1rem;
-}
-
 .bg-light {
-    background-color: var(--secondary-color-2); /* Light grey background for alternating sections */
-}
-
-/* Typography */
-h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    color: var(--primary-color); /* Headings in primary blue-green */
-}
-
-h1 {
-    font-size: 2.5rem;
+    background-color: #f9f9f9; /* Light gray background for sections */
 }
 
 h2 {
-    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50; /* Darker blue-gray heading color */
 }
 
 h3 {
+    font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #555; /* Medium gray heading color */
 }
 
 p {
     margin-bottom: 20px;
+    color: #666; /* Slightly lighter gray paragraph color */
 }
 
-/* Buttons */
+.section-description {
+    text-align: center;
+    color: #777; /* Even lighter gray for descriptions */
+    margin-bottom: 40px;
+}
+
+/* --- Buttons --- */
 .button {
     display: inline-block;
-    padding: 12px 25px;
+    padding: 12px 24px;
+    text-decoration: none;
     border-radius: 5px;
-    font-size: 1rem;
     font-weight: 600;
     text-align: center;
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    transition: background-color 0.3s ease;
+    border: none; /* Reset default button border */
+    cursor: pointer;
 }
 
 .primary-button {
-    background-color: var(--primary-color); /* Primary buttons in blue-green */
-    color: white;
-    border: none;
+    background-color: #3498db; /*  A nice blue color for primary buttons */
+    color: #fff; /* White text on primary buttons */
 }
 
 .primary-button:hover {
-    background-color: color-mix(in srgb, var(--primary-color) black 20%); /* Darker green on hover */
+    background-color: #2980b9; /* Darker blue on hover */
 }
 
 .large-button {
-    font-size: 1.2rem;
-    padding: 15px 30px;
+    padding: 16px 32px;
+    font-size: 1.1rem;
 }
 
-/* Hero Section */
+/* --- Hero Section --- */
 .hero {
-    /* background-color: var(--secondary-color-1);  Beige background removed - using image now */
-    background-image: url('Images/Fen head massage.jpeg'); /* Make sure path is correct! */
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    padding: 150px 0 100px;
+    background-color: #e0f7fa; /* Very light teal background for hero */
     text-align: center;
-    position: relative; /* For overlay */
-    color: var(--white); /* Default text color in hero section set to white */
-}
-
-/* Hero Section - Logo Styling */
-.hero-logo {
-    max-width: 150px; /* Adjust logo max width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 30px; /* Space between logo and headline */
-    display: block; /* Center logo horizontally */
-    margin-left: auto; /* Center logo horizontally */
-    margin-right: auto; /* Center logo horizontally */
-}
-
-/* Media query for smaller screens - make logo smaller on mobile */
-@media (max-width: 576px) {
-    .hero-logo {
-        max-width: 120px; /* Smaller logo on mobile */
-        margin-bottom: 20px; /* Less space below logo on mobile */
-    }
-}
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
-    z-index: 1; /* Behind text content */
+    padding: 100px 0;
 }
 
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
-    position: relative; /* To be on top of overlay */
-    z-index: 2; /* Above overlay */
+}
+
+.hero-logo {
+    width: 150px; /* Adjust logo size as needed */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 50%; /* Make logo circular if desired */
 }
 
 .hero h1 {
-    color: var(--white); /* Hero headline white */
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add black text-shadow */
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #2c3e50; /* Darker blue-gray heading color */
 }
 
 .hero-subheadline {
     font-size: 1.2rem;
-    color: var(--white); /* Hero subheadline white */
-    margin-bottom: 40px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add slightly less prominent text-shadow */
+    color: #555; /* Medium gray subheadline color */
+    margin-bottom: 30px;
 }
 
-/* Benefits Section */
+/* --- Benefits Section --- */
 .benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
     gap: 30px;
+}
+
+.benefit-item {
     text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff; /* White boxes for benefit items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-.benefit-item img {
-    margin: 0 auto 20px; /* Center image and add space below */
-    /* max-width: 80px;  Remove max-width - we'll use fixed width/height */
-    width: 80px;         /* Fixed width for icon container (adjust as needed) */
-    height: 80px;        /* Fixed height for icon container (adjust to match width for square) */
-    object-fit: contain; /* Scale image to fit within container, maintaining aspect ratio */
-}
-.benefit-item h3 {
-    margin-bottom: 10px;
+.benefit-icon-large {
+    width: 80px; /* Adjust icon size */
+    height: auto;
+    margin-bottom: 20px;
 }
 
-/* About Section */
+.benefit-icon {
+    width: 60px; /* Smaller icon size if needed elsewhere */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+
+/* --- About Section --- */
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 50px;
-    align-items: center; /* Vertically align content */
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Spacing between image and text */
 }
 
 .about-image {
-    border-radius: 8px; /* Rounded corners for image */
-    overflow: hidden; /* Ensure image stays within rounded corners */
+    flex: 1; /* Image takes up available space */
+    max-width: 400px; /* Limit image width */
+}
+
+.about-image img {
+    width: 100%; /* Image fills container */
+    height: auto;
+    border-radius: 8px;
 }
 
 .about-text {
-    /* Text content for About section */
+    flex: 2; /* Text takes up more space */
 }
 
-/* Services Section */
+
+/* --- Services Section --- */
 .services-list {
-    list-style: none; /* Remove default list bullets */
-    padding-left: 0; /* Remove default left padding for ul */
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive service list columns */
+    gap: 20px;
 }
 
 .services-list li {
-    margin-bottom: 15px;
-    padding-left: 25px; /* Add some left padding for indentation */
-    position: relative; /* For pseudo-element bullet */
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+    border-left: 3px solid #3498db; /* Blue border to the left of service items */
 }
 
-.services-list li::before {
-    content: "\2022"; /* Unicode for a bullet point */
-    position: absolute;
-    left: 0;
-    top: 5px;
-    color: var(--primary-color); /* Bullet point color - primary blue-green */
+.services-list strong {
+    font-weight: 600;
+    color: #444; /* Slightly darker strong text in services */
+    display: block; /* Make strong take full width */
+    margin-bottom: 5px;
 }
 
-/* Testimonials Section */
+
+/* --- Testimonials Section --- */
 .testimonial-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive testimonial columns */
     gap: 30px;
 }
 
 .testimonial-item {
-    background-color: white;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* For author positioning */
+}
+
+.testimonial-item p {
+    font-style: italic;
+    margin-bottom: 25px;
 }
 
 .testimonial-author {
-    font-style: italic;
     text-align: right;
-    margin-top: 15px;
-    color: var(--text-color-light);
+    font-weight: 600;
+    color: #555;
+    position: absolute; /* Position author at the bottom right */
+    bottom: 15px;
+    right: 15px;
 }
 
-/* Booking Section */
+
+/* --- Booking Section --- */
 .booking-options {
     text-align: center;
 }
@@ -252,7 +226,7 @@ p {
 .or-separator {
     margin: 20px 0;
     font-weight: bold;
-    color: var(--text-color-light); /* Use lighter text color for separator */
+    color: #777;
 }
 
 .contact-details {
@@ -263,25 +237,46 @@ p {
     margin-bottom: 10px;
 }
 
-/* Footer - Adjusted colors to use variables */
+.contact-details a {
+    color: #3498db; /* Link color in contact details */
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+
+/* --- Footer --- */
 .footer {
-    background-color: var(--text-color-dark); /* Dark background for footer */
-    color: var(--secondary-color-2);        /* Light text for footer */
-    padding: 30px 0;
+    background-color: #333; /* Dark footer background */
+    color: #fff; /* White text in footer */
     text-align: center;
+    padding: 20px 0;
     font-size: 0.9rem;
 }
 
 
-/* Media Queries for Responsiveness (No Changes Here) */
+/* --- Media Queries for Responsiveness --- */
 @media (max-width: 768px) {
-    /* Tablet and smaller screens */
+    .section-padding {
+        padding: 60px 0; /* Reduced padding for smaller screens */
+    }
+
+    h2 {
+        font-size: 2rem; /* Smaller heading font size on mobile */
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
     .hero {
-        padding: 100px 0 80px; /* Adjust hero padding on smaller screens */
+        padding: 80px 0; /* Reduced hero padding on mobile */
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.8rem; /* Smaller hero heading on mobile */
     }
 
     .hero-subheadline {
@@ -289,44 +284,38 @@ p {
     }
 
     .about-content {
-        grid-template-columns: 1fr; /* Stack columns on smaller screens */
-        text-align: center; /* Center text in stacked about section */
+        flex-direction: column; /* Stack about image and text on mobile */
+        text-align: center; /* Center text in about section on mobile */
     }
 
     .about-image {
-        margin-bottom: 30px; /* Add space below image when stacked */
+        max-width: 80%; /* Slightly smaller about image on mobile */
+        margin-bottom: 30px; /* Add margin below image in about on mobile */
     }
 
-    .section-padding {
-        padding: 60px 0; /* Reduce section padding on smaller screens */
-    }
-
-    h2 {
-        font-size: 1.8rem; /* Slightly smaller section headings */
+    .testimonial-grid {
+        grid-template-columns: 1fr; /* Stack testimonials on mobile */
     }
 }
 
 @media (max-width: 576px) {
-    /* Even smaller screens (mobile) */
-    .hero h1 {
-        font-size: 1.7rem; /* Even smaller hero headline on mobile */
-    }
-
-    .hero-subheadline {
-        font-size: 1rem;
-    }
-
     .section-padding {
-        padding: 40px 0; /* Further reduce section padding on mobile */
+        padding: 40px 0; /* Even less padding on very small screens */
     }
 
-    .button, .large-button {
-        font-size: 1rem; /* Buttons smaller on mobile */
-        padding: 10px 20px;
+    h2 {
+        font-size: 1.8rem; /* Even smaller heading font on tiny screens */
+    }
+
+    .hero h1 {
+        font-size: 2.4rem; /* Even smaller hero heading on tiny screens */
     }
 
     .large-button {
-        font-size: 1.1rem; /* Slightly larger button still on mobile */
+        padding: 14px 28px; /* Slightly smaller button on very small screens */
+        font-size: 1rem;
+    }
+}
         padding: 12px 25px;
     }
 }
