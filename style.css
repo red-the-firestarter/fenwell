@@ -20,8 +20,21 @@
 body {
     font-family: 'Poppins', sans-serif; /* Or 'Roboto', sans-serif for body text */
     line-height: 1.6;
-    color: var(--text-color-light); /* Set default text color to lighter gray */
-    background-color: var(--white);
+    color: var(--text-color-light); /* Set body text to lighter gray */
+    background-color: var(--white); /* Set body background to pure white */ /* NEW - Set the main body background to white */
+}
+
+.section-description {
+    color: var(--text-color-light); /* Use lighter gray for section descriptions */
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.testimonial-author {
+    font-style: italic;
+    text-align: right;
+    margin-top: 15px;
+    color: var(--text-color-light); /* Use lighter gray for testimonial author text */
 }
 
 img {
@@ -51,7 +64,7 @@ a {
 }
 
 .bg-light {
-    background-color:var(--secondary-color-1); /* Use Warm Beige/Cream for light backgrounds */
+    background-color: var(--secondary-color-2); /* Use light gray for bg-light sections */
 }
 
 /* Typography */
@@ -60,9 +73,8 @@ h1, h2, h3 {
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
-    var(--text-color-light); /* Set default text color to lighter gray */
+    color: var(--primary-color); /* Set heading color to primary */
 }
-
 h1 {
     font-size: 2.5rem;
 }
@@ -107,7 +119,7 @@ p {
 
 /* Hero Section */
 .hero {
-    background-color: var(--secondary-color-1); /* Change to Warm Beige/Cream background */
+    background-color: var(--secondary-color-1); /* Use warm beige/cream for hero */
     padding: 150px 0 100px;
     text-align: center;
 }
