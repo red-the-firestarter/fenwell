@@ -118,6 +118,22 @@ p {
 }
 
 /* Hero Section */
+.hero::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* Positioned relative to .hero */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay (adjust opacity 0.3 as needed) */
+    z-index: 1; /* Place overlay behind text content */
+}
+
+.hero-content {
+    position: relative; /* Ensure hero content is on top of overlay */
+    z-index: 2; /* Place content above overlay */
+    /* ... other styles for .hero-content ... */
+}
 .hero {
     /* Remove background-color: var(--secondary-color-1);  We're using image now */
     background-image: url('Images/Fen head massage.jpeg'); /* Replace with your image path */
@@ -128,10 +144,6 @@ p {
     text-align: center;
     position: relative; /* For overlay if needed */
     color: var(--white); /* Set default text color to white for better visibility over image - adjust if needed */
-}
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
 }
 
 .hero h1 {
