@@ -1,3 +1,5 @@
+/* Updated style.css */
+
 /* Reset and Basic Styling */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -7,15 +9,15 @@
 
 /* --- Color Palette CSS Variables (Serene Wellness) --- */
 :root {
-    --primary-color: #1C6E8F;        /* Deep Blue-Green */
-    --secondary-color-1: #F5F0EC;   /* Warm Beige/Cream */
-    --secondary-color-2: #E0E0E0;   /* Light Gray */
-    --accent-color: #B2BEB5;         /* Muted Sage Green */
-    --text-color-dark: #333;         /* Dark Gray for primary text (like headings) */
-    --text-color-light: #555;        /* Lighter Gray for secondary text, body copy */
-    --background-light: #f9f9f9;     /* Light Background (like for sections) */
-    --background-hero: #e0f7fa;      /* Hero Section Background (light cyan/teal - we can keep this or adjust with palette) */
-    --white: #fff;                  /* Pure White */
+    --primary-color: #1C6E8F;         /* Deep Blue-Green */
+    --secondary-color-1: #F5F0EC;      /* Warm Beige/Cream */
+    --secondary-color-2: #E0E0E0;      /* Light Gray */
+    --accent-color: #B2BEB5;           /* Muted Sage Green */
+    --text-color-dark: #333;           /* Dark Gray for primary text (like headings) */
+    --text-color-light: #555;          /* Lighter Gray for secondary text, body copy */
+    --background-light: #f9f9f9;       /* Light Background (like for sections) */
+    --background-hero: #e0f7fa;        /* Hero Section Background (light cyan/teal - we can keep this or adjust with palette) */
+    --white: #fff;                    /* Pure White */
 }
 
 body {
@@ -177,9 +179,9 @@ p {
 
 .benefit-item img {
     margin: 0 auto 20px; /* Center image and add space below */
-    /* max-width: 80px;  Remove max-width - we'll use fixed width/height */
-    width: 80px;         /* Fixed width for icon container (adjust as needed) */
-    height: 80px;        /* Fixed height for icon container (adjust to match width for square) */
+    /* max-width: 80px;  Removed fixed width/height - using max now for flexibility */
+    max-width: 80px;       /* Max width for icon container (adjust as needed) */
+    max-height: 80px;      /* Max height for icon container (adjust to match width for square) */
     object-fit: contain; /* Scale image to fit within container, maintaining aspect ratio */
 }
 .benefit-item h3 {
@@ -266,7 +268,7 @@ p {
 /* Footer - Adjusted colors to use variables */
 .footer {
     background-color: var(--text-color-dark); /* Dark background for footer */
-    color: var(--secondary-color-2);        /* Light text for footer */
+    color: var(--secondary-color-2);      /* Light text for footer */
     padding: 30px 0;
     text-align: center;
     font-size: 0.9rem;
@@ -330,3 +332,11 @@ p {
         padding: 12px 25px;
     }
 }
+
+/* --- Accessibility Reminder --- */
+/*
+IMPORTANT: Remember to check color contrast ratios for text and backgrounds
+to ensure accessibility, especially for users with visual impairments.
+Use a tool like the WebAIM Color Contrast Checker. You may need to adjust
+the color variables in the :root section to meet accessibility standards if needed.
+*/
