@@ -119,11 +119,16 @@ p {
 
 /* Hero Section */
 .hero {
-    background-color: var(--secondary-color-1); /* Use warm beige/cream for hero */
+    /* Remove background-color: var(--secondary-color-1);  We're using image now */
+    background-image: url('Images/Fen head massage.jpeg'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire hero area */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* No repeating the image */
     padding: 150px 0 100px;
     text-align: center;
+    position: relative; /* For overlay if needed */
+    color: var(--white); /* Set default text color to white for better visibility over image - adjust if needed */
 }
-
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
