@@ -1,3 +1,10 @@
+/* Reset and Basic Styling */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* --- Color Palette CSS Variables (Serene Wellness) --- */
 :root {
     --primary-color: #1C6E8F;        /* Deep Blue-Green */
@@ -7,34 +14,15 @@
     --text-color-dark: #333;         /* Dark Gray for primary text (like headings) */
     --text-color-light: #555;        /* Lighter Gray for secondary text, body copy */
     --background-light: #f9f9f9;     /* Light Background (like for sections) */
-    --hero-background-color: #e0f7fa; /* Hero Section Background (light cyan/teal - kept for potential future use) */
+    --background-hero: #e0f7fa;      /* Hero Section Background (light cyan/teal - we can keep this or adjust with palette) */
     --white: #fff;                  /* Pure White */
-}
-/* Reset and Basic Styling */
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body {
     font-family: 'Poppins', sans-serif; /* Or 'Roboto', sans-serif for body text */
     line-height: 1.6;
-    color: var(--text-color-light); /* Set body text to lighter gray */
-    background-color: var(--white); /* Set body background to pure white */ /* NEW - Set the main body background to white */
-}
-
-.section-description {
-    color: var(--text-color-light); /* Use lighter gray for section descriptions */
-    margin-bottom: 30px;
-    font-size: 1rem;
-}
-
-.testimonial-author {
-    font-style: italic;
-    text-align: right;
-    margin-top: 15px;
-    color: var(--text-color-light); /* Use lighter gray for testimonial author text */
+    color: var(--text-color-light);
+    background-color: var(--white); /* Main body background set to white */
 }
 
 img {
@@ -58,13 +46,13 @@ a {
 }
 
 .section-description {
-    color: #777;
+    color: var(--text-color-light);
     margin-bottom: 30px;
     font-size: 1rem;
 }
 
 .bg-light {
-    background-color: var(--secondary-color-2); /* Use light gray for bg-light sections */
+    background-color: var(--secondary-color-2); /* Light grey background for alternating sections */
 }
 
 /* Typography */
@@ -73,8 +61,9 @@ h1, h2, h3 {
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
-    color: var(--primary-color); /* Set heading color to primary */
+    color: var(--primary-color); /* Headings in primary blue-green */
 }
+
 h1 {
     font-size: 2.5rem;
 }
@@ -103,13 +92,13 @@ p {
 }
 
 .primary-button {
-    background-color: var(--primary-color); /* Use CSS variable */
+    background-color: var(--primary-color); /* Primary buttons in blue-green */
     color: white;
-    border: none; /* Removed border for now, can add back if needed */
+    border: none;
 }
 
 .primary-button:hover {
-    background-color: color-mix(in srgb, var(--primary-color) black 20%); /* Darken on hover using color-mix - modern CSS */
+    background-color: color-mix(in srgb, var(--primary-color) black 20%); /* Darker green on hover */
 }
 
 .large-button {
@@ -118,42 +107,44 @@ p {
 }
 
 /* Hero Section */
+.hero {
+    /* background-color: var(--secondary-color-1);  Beige background removed - using image now */
+    background-image: url('Images/Fen head massage.jpeg'); /* Make sure path is correct! */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 150px 0 100px;
+    text-align: center;
+    position: relative; /* For overlay */
+    color: var(--white); /* Default text color in hero section set to white */
+}
+
 .hero::before {
-    content: ""; /* Required for pseudo-elements */
-    position: absolute; /* Positioned relative to .hero */
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay (adjust opacity 0.3 as needed) */
-    z-index: 1; /* Place overlay behind text content */
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
+    z-index: 1; /* Behind text content */
 }
 
 .hero-content {
-    position: relative; /* Ensure hero content is on top of overlay */
-    z-index: 2; /* Place content above overlay */
-    /* ... other styles for .hero-content ... */
-}
-.hero {
-    /* Remove background-color: var(--secondary-color-1);  We're using image now */
-    background-image: url('Images/Fen head massage.jpeg'); /* Replace with your image path */
-    background-size: cover; /* Cover the entire hero area */
-    background-position: center center; /* Center the image */
-    background-repeat: no-repeat; /* No repeating the image */
-    padding: 150px 0 100px;
-    text-align: center;
-    position: relative; /* For overlay if needed */
-    color: var(--white); /* Set default text color to white for better visibility over image - adjust if needed */
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative; /* To be on top of overlay */
+    z-index: 2; /* Above overlay */
 }
 
 .hero h1 {
-    color: #333; /* Dark text for hero headline */
+    color: var(--text-color-dark); /* Hero headline in dark gray */
     margin-bottom: 20px;
 }
 
 .hero-subheadline {
     font-size: 1.2rem;
-    color: #555; /* Slightly lighter text for subheadline */
+    color: var(--text-color-light);
     margin-bottom: 40px;
 }
 
@@ -204,11 +195,11 @@ p {
 }
 
 .services-list li::before {
-    content: "\2022";
+    content: "\2022"; /* Unicode for a bullet point */
     position: absolute;
     left: 0;
     top: 5px;
-    color: var(--primary-color); /* Use CSS variable */
+    color: var(--primary-color); /* Bullet point color - primary blue-green */
 }
 
 /* Testimonials Section */
@@ -229,7 +220,7 @@ p {
     font-style: italic;
     text-align: right;
     margin-top: 15px;
-    color: #777;
+    color: var(--text-color-light);
 }
 
 /* Booking Section */
@@ -240,7 +231,7 @@ p {
 .or-separator {
     margin: 20px 0;
     font-weight: bold;
-    color: #777;
+    color: var(--text-color-light); /* Use lighter text color for separator */
 }
 
 .contact-details {
@@ -251,16 +242,17 @@ p {
     margin-bottom: 10px;
 }
 
-/* Footer */
+/* Footer - Adjusted colors to use variables */
 .footer {
-    background-color: #333; /* Dark background for footer */
-    color: #f9f9f9; /* Light text for footer */
+    background-color: var(--text-color-dark); /* Dark background for footer */
+    color: var(--secondary-color-2);        /* Light text for footer */
     padding: 30px 0;
     text-align: center;
     font-size: 0.9rem;
 }
 
-/* Media Queries for Responsiveness */
+
+/* Media Queries for Responsiveness (No Changes Here) */
 @media (max-width: 768px) {
     /* Tablet and smaller screens */
     .hero {
@@ -316,3 +308,4 @@ p {
         font-size: 1.1rem; /* Slightly larger button still on mobile */
         padding: 12px 25px;
     }
+}
