@@ -15,7 +15,7 @@
     --accent-color: #B2BEB5;           /* Muted Sage Green */
     --text-color-dark: #333;           /* Dark Gray for primary text (like headings) */
     --text-color-light: #555;          /* Lighter Gray for secondary text, body copy */
-    --background-light: #f9f9f9;       /* Light Background (like for sections) */
+    --background-light: #CECFAD;       /* Light Background (like for sections) */
     --background-hero: #e0f7fa;        /* Hero Section Background (light cyan/teal - we can keep this or adjust with palette) */
     --white: #fff;                    /* Pure White */
 }
@@ -24,7 +24,7 @@ body {
     font-family: 'Poppins', sans-serif; /* Or 'Roboto', sans-serif for body text */
     line-height: 1.6;
     color: var(--text-color-light);
-    background-color: var(--white); /* Main body background set to white */
+    background-color: var(--background-light); /* Main body background set to white */
 }
 
 img {
