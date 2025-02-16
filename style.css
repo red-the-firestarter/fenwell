@@ -100,7 +100,7 @@ p {
 }
 
 .primary-button:hover {
-    background-color: var(--background-hero)
+    background-color: var(--background-hero);
 }
 
 .large-button {
