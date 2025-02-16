@@ -251,40 +251,41 @@ p {
     color: var(--primary-color); /* Bullet point color - primary blue-green */
 }
 
-/* Overall Testimonials Section Styling (Section Padding, Background) */
+/* style.css */
+
+/* --- Testimonials Section CSS (Revised for One Testimonial Per Page) --- */
+
+/* Overall Testimonials Section Styling */
 .testimonials.section-padding.bg-light {
-    /* Inherits section-padding and bg-light classes from your general CSS */
-    /* You can add specific styles for the testimonials section here if needed */
-    /* Example: you could adjust background color specifically for testimonials if desired */
-    /* background-color: var(--secondary-color-2);  (bg-light already sets this, but you could override here) */
+    /* Inherits section-padding and bg-light classes */
 }
 
-/* Testimonial Carousel Container */
+/* Testimonial Carousel Container - Ensure Full Width */
 .testimonial-carousel {
     overflow-x: hidden; /* Hide slides that are not visible */
     position: relative; /* For navigation button positioning */
-    /* Optional: You could add some margin or padding directly to the carousel container if needed */
-    /* margin-bottom: 20px; */
+    width: 100%;        /* Make sure carousel container takes full width */
+    max-width: 100%;    /* Ensure it doesn't exceed parent width if necessary */
 }
 
-/* Individual Testimonial Slides */
+/* Individual Testimonial Slides - Take Full Carousel Width */
 .testimonial-slide {
-    padding: 0 15px; /* Optional side padding around slides */
+    padding: 0; /* Removed side padding on slides to ensure full width */
     box-sizing: border-box;
     flex: 0 0 100%; /* Each slide takes full width */
     width: 100%;     /* Ensure full width */
 }
 
-/* Styles for the Testimonial Item Content (Inside each Slide) */
-.testimonial-item { /* Renamed from .testimonial-grid back to .testimonial-item for clarity */
+/* Styles for Testimonial Item Content (Inside Slides) - Keep existing styles */
+.testimonial-item {
     background-color: white;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    margin: 0; /* Remove any margins that might interfere with carousel layout */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0; /* Ensure no margins are causing overflow */
 }
 
-/* Testimonial Author Style */
+/* Testimonial Author Style - Keep existing styles */
 .testimonial-author {
     font-style: italic;
     text-align: right;
@@ -292,28 +293,30 @@ p {
     color: var(--text-color-light);
 }
 
-/* Carousel Navigation Buttons Container */
+/* Carousel Navigation Buttons Container - Keep existing styles */
 .carousel-navigation {
     text-align: center;
-    margin-top: 20px; /* Space between testimonials and navigation buttons */
+    margin-top: 20px;
 }
 
-/* Carousel Navigation Buttons (Previous/Next) */
+/* Carousel Navigation Buttons (Previous/Next) - Keep existing styles */
 .carousel-navigation button {
     background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 10px 20px;
-    margin: 0 10px; /* Spacing between buttons */
+    margin: 0 10px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s ease; /* Hover effect */
+    transition: background-color 0.3s ease;
 }
 
 .carousel-navigation button:hover {
-    background-color: color-mix(in srgb, var(--primary-color) black 20%); /* Darker on hover */
+    background-color: color-mix(in srgb, var(--primary-color) black 20%);
 }
+
+/* --- End of Testimonials Section CSS --- */
 
 /* Booking Section */
 .booking-options {
