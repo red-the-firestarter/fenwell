@@ -127,41 +127,6 @@
         </div>
     </footer>
 </section>
-/*
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const carousel = document.querySelector('.testimonial-carousel');
-            const slides = document.querySelectorAll('.testimonial-slide');
-            const prevButton = document.querySelector('.prev-slide');
-            const nextButton = document.querySelector('.next-slide');
-
-            let currentIndex = 0;
-
-            function showSlide(index) {
-                if (index < 0) {
-                    currentIndex = slides.length - 1; // Wrap to last slide if going before first
-                } else if (index >= slides.length) {
-                    currentIndex = 0; // Wrap to first slide if going after last
-                }
-                carousel.style.transform = `translateX(-${currentIndex * 100}%)`; // Slide carousel
-            }
-
-            function nextSlide() {
-                currentIndex++;
-                showSlide(currentIndex);
-            }
-
-            function prevSlide() {
-                currentIndex--;
-                showSlide(currentIndex);
-            }
-
-            nextButton.addEventListener('click', nextSlide);
-            prevButton.addEventListener('click', prevSlide);
-
-            showSlide(currentIndex); // Show initial slide (first one)
-        });
-    </script> */
 
 </body>
 </html>
