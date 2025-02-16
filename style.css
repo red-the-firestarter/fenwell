@@ -184,14 +184,20 @@ p {
 }
 
 .benefit-item img {
-    margin: 0 auto 20px; /* Center image and add space below */
+    margin: 0 auto 0; /* Changed to 0 bottom margin */
     /* max-width: 80px;  Removed fixed width/height - using max now for flexibility */
-    max-width: 80px;       /* Max width for icon container (adjust as needed) */
-    max-height: 80px;      /* Max height for icon container (adjust to match width for square) */
+    max-width: 80px;
+    max-height: 80px;
     object-fit: contain; /* Scale image to fit within container, maintaining aspect ratio */
 }
-.benefit-item h3 {
-    margin-bottom: 10px;
+.benefit-item {
+    text-align: center;
+    /* padding: 20px;  You might already have padding, adjust if needed */
+    padding: 20px; /* Ensure there's some padding around the content */
+    padding-bottom: 30px; /* Add bottom padding to create vertical space below content - adjust this value */
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* About Section */
