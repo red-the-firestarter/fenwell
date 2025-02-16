@@ -184,7 +184,7 @@ p {
 }
 
 .benefit-item img {
-    margin: 0 auto 0; /* Changed to 0 bottom margin */
+    margin: 0 auto 20; /* Changed to 0 bottom margin */
     /* max-width: 80px;  Removed fixed width/height - using max now for flexibility */
     max-width: 80px;
     max-height: 80px;
