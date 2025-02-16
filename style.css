@@ -319,7 +319,7 @@ p {
 @media (max-width: 768px) {
     /* Tablet and smaller screens */
     .hero {
-        padding: 100px 0 80px; /* Adjust hero padding on smaller screens */
+        padding: 20px 0 80px; /* Adjust hero padding on smaller screens */
     }
 
     .hero h1 {
