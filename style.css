@@ -194,9 +194,9 @@ p {
     text-align: center;
     padding: 20px; /* Keep existing padding or adjust as needed */
     padding-bottom: 30px; /* Keep your adjusted bottom padding */
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* border-radius: 8px; */
+    /* background-color: white; */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 
     display: flex;          /* Enable flexbox for benefit-item */
     flex-direction: column; /* Stack content vertically inside benefit-item */
