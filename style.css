@@ -24,7 +24,7 @@ body {
     font-family: 'Poppins', sans-serif; /* Or 'Roboto', sans-serif for body text */
     line-height: 1.6;
     color: var(--text-color-light);
-    background-color: var(--background-light); /* Main body background set to white */
+    background-color: var(--secondary-color-1); /* Main body background set to white */
 }
 
 img {
