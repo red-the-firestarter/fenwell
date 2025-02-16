@@ -95,7 +95,7 @@ p {
 
 .primary-button {
     background-color: var(--primary-color); /* Primary buttons in blue-green */
-    color: white;
+    color: var(--background-light);
     border: none;
 }
 
