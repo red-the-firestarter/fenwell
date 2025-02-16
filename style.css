@@ -100,7 +100,7 @@ p {
 }
 
 .primary-button:hover {
-    background-color: color-mix(in srgb, var(--primary-color) black 20%); /* Darker green on hover */
+    background-color: var(--background-hero)
 }
 
 .large-button {
@@ -311,7 +311,7 @@ p {
 }
 
 .carousel-navigation button:hover {
-    background-color: color-mix(in srgb, var(--primary-color) black 20%);
+    background-color: var(--background-hero);
 }
 
 /* --- End of Testimonials Section CSS --- */
