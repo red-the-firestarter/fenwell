@@ -270,7 +270,7 @@ p {
 .testimonial-slide {
     padding: 0; /* Removed side padding on slides to ensure full width */
     box-sizing: border-box;
-    flex: 100% 0 100%; /* Each slide takes full width */
+    flex: 0 0 100%; /* Each slide takes full width */
     width: 100%;     /* Ensure full width */
 }
 
