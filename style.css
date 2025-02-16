@@ -54,7 +54,7 @@ a {
 }
 
 .bg-light {
-    background-color: var(--secondary-color-2); /* Light grey background for alternating sections */
+    background-color: var(--background-light); /* Light grey background for alternating sections */
 }
 
 /* Typography */
