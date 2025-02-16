@@ -192,12 +192,26 @@ p {
 }
 .benefit-item {
     text-align: center;
-    /* padding: 20px;  You might already have padding, adjust if needed */
-    padding: 20px; /* Ensure there's some padding around the content */
-    padding-bottom: 30px; /* Add bottom padding to create vertical space below content - adjust this value */
+    padding: 20px; /* Keep existing padding or adjust as needed */
+    padding-bottom: 30px; /* Keep your adjusted bottom padding */
     border-radius: 8px;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    display: flex;          /* Enable flexbox for benefit-item */
+    flex-direction: column; /* Stack content vertically inside benefit-item */
+}
+
+.benefit-item h3 {
+    margin-bottom: 10px; /* Keep existing margin-bottom for h3 */
+    min-height: 3rem;    /* Add a minimum height to h3 - adjust this value */
+    display: flex;        /* Make h3 a flex container itself */
+    align-items: center;  /* Vertically center the text within h3 */
+    justify-content: center; /* Optionally center text horizontally within h3 if needed */
+}
+
+.benefit-item p {
+    margin-top: auto;      /* Push paragraphs to the bottom */
 }
 
 /* About Section */
