@@ -29,7 +29,7 @@ body {
 
 img {
     max-width: 100%;
-    display: block; /* Prevents extra space below images */
+    /*display: block;*/ /* Prevents extra space below images */
 }
 
 a {
@@ -131,7 +131,7 @@ p {
 .hero-logo {
     max-width: 150px; /* Adjust logo max width as needed */
     height: auto; /* Maintain aspect ratio */
-    margin-bottom: 30px; /* Space between logo and headline */
+    margin-bottom: 60px; /* Space between logo and headline */
     display: block; /* Center logo horizontally */
     margin-left: auto; /* Center logo horizontally */
     margin-right: auto; /* Center logo horizontally */
