@@ -141,7 +141,7 @@ p {
 @media (max-width: 576px) {
     .hero-logo {
         max-width: 120px; /* Smaller logo on mobile */
-        margin-bottom: 20px; /* Less space below logo on mobile */
+        margin-bottom: 60px; /* Less space below logo on mobile */
     }
 }
 .hero::before {
