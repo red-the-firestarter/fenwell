@@ -121,7 +121,7 @@ p {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    padding: 150px 0 100px;
+    padding: 60px 0 100px;
     text-align: center;
     position: relative; /* For overlay */
     color: var(--white); /* Default text color in hero section set to white */
