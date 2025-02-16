@@ -29,7 +29,7 @@ body {
 
 img {
     max-width: 100%;
-    /*display: block;*/ /* Prevents extra space below images */
+    display: block; /* Prevents extra space below images */
 }
 
 a {
@@ -121,7 +121,7 @@ p {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    padding: 60px 0 100px;
+    padding: 20px 0 100px;
     text-align: center;
     position: relative; /* For overlay */
     color: var(--white); /* Default text color in hero section set to white */
