@@ -268,10 +268,10 @@ p {
 
 /* Individual Testimonial Slides - Take Full Carousel Width */
 .testimonial-slide {
-    padding: 0; /* Removed side padding on slides to ensure full width */
+    padding: 0;
     box-sizing: border-box;
-    flex: 0 0 100%; /* Each slide takes full width */
-    width: 100%;     /* Ensure full width */
+    flex: 0 0 100%; 
+    width: 100%;
 }
 
 /* Styles for Testimonial Item Content (Inside Slides) - Keep existing styles */
